@@ -1,0 +1,162 @@
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: linear-gradient(135deg, #f5f5f5, #ddd);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 40px;
+    perspective: 500px;
+    animation: rotateIn 1.5s ease-in-out;
+    transition: transform 0.4s;
+  }
+  
+  .about-subtitle:hover {
+    transform: rotateX(15deg);
+  }
+  
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .about-text, .about-image {
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .about-text:hover, .about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .about-text p:hover {
+    color: #333;
+  }
+  
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: rotateY(15deg);
+  }
+  
+  
+  .about-btn {
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .about-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text p {
+      font-size: 1.1rem;
+    }
+  
+    .about-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+  
